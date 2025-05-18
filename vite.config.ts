@@ -1,11 +1,18 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path'
+import * as path from 'path'
+import { fileURLToPath } from 'url'
 
-// https://vitejs.dev/config/
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
 export default defineConfig({
   plugins: [vue()],
-  base: '/Portfoli/',
+  base: '/',
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src')
+    }
+  },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -14,14 +21,9 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          'vendor': ['vue', 'vue-router'],
+          'vendor': ['vue', 'vue-router']
         }
       }
-    }
-  },
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src')
     }
   }
 })
