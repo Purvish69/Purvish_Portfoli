@@ -10,16 +10,16 @@ const links = [
     url: 'https://www.linkedin.com/in/purvish-patel-0359bb304/',
     icon: '💼'
   },
-  {
-    name: 'Twitter',
-    url: 'twitter.com',
-    icon: '🐦'
-  },
-  {
-    name: 'Instagram',
-    url: 'instagram.com',
-    icon: '📷'
-  }
+  // {
+  //   name: 'Twitter',
+  //   url: 'twitter.com',
+  //   icon: '🐦'
+  // },
+  // {
+  //   name: 'Instagram',
+  //   url: 'instagram.com',
+  //   icon: '📷'
+  // }
 ];
 </script>
 
